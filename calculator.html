@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: #667eea;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+        }
+        h1 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            color: #718096;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+        .bio {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #5a67d8;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: #edf2f7;
+            color: #4a5568;
+        }
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Profile Initial or Emoji -->
+        <div class="avatar">🚀</div>
+        
+        <h1>Hello, I'm [Your Name]</h1>
+        <p class="tagline">Web Developer & Tech Enthusiast</p>
+        
+        <div class="bio">
+            Welcome to my personal corner of the internet! I am learning how to build things for the web using HTML, CSS, and JavaScript. Stay tuned for more projects coming soon to my GitHub.
+        </div>
+
+        <div class="btn-container">
+            <a href="https://github.com/" target="_blank" class="btn">GitHub Profile</a>
+            <a href="mailto:your-email@example.com" class="btn btn-secondary">Contact Me</a>
+        </div>
+    </div>
+// Listen for keyboard presses
+document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    if ((key >= '0' && key <= '9') || key === '.' || key === '+' || key === '-' || key === '*') {
+        appendValue(key);
+    } else if (key === '/') {
+        event.preventDefault(); // Prevents browser search shortcut
+        appendValue('/');
+    } else if (key === 'Enter' || key === '=') {
+        calculateResult();
+    } else if (key === 'Backspace') {
+        deleteLast();
+    } else if (key === 'Escape' || key.toLowerCase() === 'c') {
+        clearDisplay();
+    }
+});
+</body>
+</html>
